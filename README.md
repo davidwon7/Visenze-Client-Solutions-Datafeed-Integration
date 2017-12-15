@@ -1,6 +1,10 @@
 # Visenze-Client-Solutions-Datafeed-Integration
 This is the scripts for Visenze DATA INDEXING APIs
 
+Steps to follow before executing the script
+1. Create three folders: your_upload_folder_name, your_backup_folder_name, your_ftp_folder_name;
+2. Put the csv files to be uploaded into your_upload_folder_name;
+3. Execute the command below. 
 
 Command
 ```bash
