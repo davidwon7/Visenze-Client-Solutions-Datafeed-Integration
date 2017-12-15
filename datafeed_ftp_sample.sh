@@ -12,6 +12,8 @@
 #ftp_address="###.visenze.com"
 
 
+#Generate long flags
+
 while [[ $# -gt 0 ]]
 do
 	key="$1"
@@ -57,9 +59,12 @@ do
 done
 
 
+#Backup the .csv files into the folder named "csv_backup" from the "csv_to_upload" folder. 
 
 rsync -a --include='*.csv' --exclude='*' "${args[0]}/" "${args[1]}/"
 
+
+#Send the files to the ftp server according to the instructions: http://developers.visenze.com/setup/#FTP-upload
 for f in "${args[0]}"/*.csv; do
 	filename=$(basename $f)
  	gzip -k "${args[0]}/$filename"
