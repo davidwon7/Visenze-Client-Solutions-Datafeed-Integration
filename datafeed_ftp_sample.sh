@@ -1,13 +1,15 @@
 #!/usr/bin/env bash
 #full mode
 
+#Example folder names
 #dir_upload="csv_to_upload"
 #dir_backup="csv_backup"
 #dir_ftp="ftpuploadtest"
-#username="chauncy_test_1590"
-#password="m9h126oaool7511h7301199v54"
-#ftp_address="ftp1.visenze.com"
 
+#Example FTP credentials (get from Visenze dashboard)
+#username="chauncyyin"
+#password="########################"
+#ftp_address="###.visenze.com"
 
 
 while [[ $# -gt 0 ]]
