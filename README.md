@@ -4,7 +4,11 @@ This is the scripts for Visenze DATA INDEXING APIs
 Steps to follow before executing the script
 1. Create three folders: your_upload_folder_name, your_backup_folder_name, your_ftp_folder_name;
 2. Put the csv files to be uploaded into your_upload_folder_name;
-3. Execute the command below. 
+3. Review Visenze ftp indexing procedure: http://developers.visenze.com/setup/#FTP-upload
+4. Pay special attention to the naming of the csv file
+- Your admin access key should be the filename. For Example: 83b3a2dc6cf4b0966575250b26449770.csv.gz
+- We accept only UTF-8 formatting for the data file.
+5. Execute the command below. 
 
 Install 
 ```bash
