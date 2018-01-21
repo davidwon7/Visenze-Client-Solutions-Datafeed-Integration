@@ -1,5 +1,7 @@
 # Visenze-Client-Solutions-Datafeed-Integration
-This is the scripts for Visenze DATA INDEXING APIs
+This script creates a scheduled job on Visenze datafeed integration through FTP method. It supports two modes: 
+1. FULL (Default):the contents of this file will be used to fully replace your current image database.
+2. INCREMENT:	the contents of the datafeed file will be used to append new entries or update existing entries. If a delete file is provided, batch remove based on the data in the delete file will be performed after the successful index of the datafeed.
 
 Steps to follow before executing the script
 1. Create three folders: your_upload_folder_name, your_backup_folder_name, your_ftp_folder_name;
