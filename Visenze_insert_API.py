@@ -4,6 +4,8 @@ import urllib.request
 import urllib.parse
 import argparse
 
+#This is the Visenze API index program
+
 #Add flags to the program
 parser = argparse.ArgumentParser(description='Visenze datafeed API integration')
 parser.add_argument('-i','--input', type=str, metavar='', help='the input datafeed in csv format', required=True)
