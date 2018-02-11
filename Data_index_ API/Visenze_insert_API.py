@@ -4,8 +4,6 @@ import urllib.request
 import urllib.parse
 import argparse
 
-#This is the Visenze API index program
-
 #Add flags to the program
 parser = argparse.ArgumentParser(description='Visenze datafeed API integration')
 parser.add_argument('-i','--input', type=str, metavar='', help='the input datafeed in csv format', required=True)
@@ -16,7 +14,9 @@ args = parser.parse_args()
 #Validate image urls
 def validate_url(im_url):
     try:
-        response = urllib.request.urlopen(im_url).getcode()
+        headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/55.0.2883.75 Safari/537.36'}
+        req = urllib.request.Request(url=im_url,headers=headers)
+        response = urllib.request.urlopen(req).getcode()
         if response == 200:
             return im_url
     except Exception:
