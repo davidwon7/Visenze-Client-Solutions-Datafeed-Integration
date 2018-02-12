@@ -15,7 +15,7 @@ args = parser.parse_args()
 def validate_url(im_url):
     try:
         headers = {'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko)\
-                    Chrome/55.0.2883.75 Safari/537.36'}
+                    Chrome/55.0.2883.75 Safari/537.36'} 
         req = urllib.request.Request(url=im_url,headers=headers)
         response = urllib.request.urlopen(req).getcode()
         if response == 200:
@@ -62,11 +62,3 @@ def Visenze_datafeed_insert(input,access_key,secret_key):
 
 if __name__ == '__main__':
     Visenze_datafeed_insert(args.input,args.access_key,args.secret_key)
-
-
-
-
-
-
-
-
